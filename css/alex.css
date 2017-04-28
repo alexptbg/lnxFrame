@@ -1,0 +1,344 @@
+body { font-family: Helvetica, Arial, sans-serif; line-height: 1.3em; -webkit-font-smoothing: antialiased; margin:0; padding:0; background-color:#000000; color:#ffffff;}
+.container {
+    position: relative;
+    width: 22%;
+    min-width: 20%;
+    height: 100%;
+    min-height: 100%;
+	 margin: 0px;
+	 background-color: #000000;
+    background: rgba(0,0,0,0.6);
+    /*
+    background: -moz-linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+    */
+    float: right;
+    border-left: 1px solid #A7F700;
+    overflow: hidden;
+}
+#clock {
+    padding: 8px;
+    border-bottom: 1px solid #A7F700;
+}
+#week {
+	 width: 100%;
+	 height: 18px;
+    color: #666666;
+    text-align: center;
+    font-size: 15px;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+}
+#week span {
+	padding: 0 9px 0 0;
+	color: #666666;
+	text-decoration: none;
+}
+#week span:last-child {
+	padding-right: 0;
+}
+#week span.active {
+	color:#A7F700;
+	text-decoration: underline;
+}
+#week span.noactive {
+	color: #666666;
+	text-decoration: none;
+}
+#ctime {
+	 width: 100%;
+	 font-family: 'Digital-7Mono';
+    color:#A7F700;
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top:14px
+    padding-bottom:14px;
+}
+#cdate {
+	 width: 100%;
+	 height: 20px;
+    color: #666666;
+    text-align: center;
+    font-size: 20px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+#weather {
+    border-bottom: 1px solid #A7F700;
+    color: #A7F700;
+    padding: 8px;
+}
+img#cond {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 4px 0;
+    width: 90px;
+    height: 90px;
+}
+#icond {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top:-8px;
+    height: 98px;
+    max-height: 98px;
+}
+#icond i {
+    font-size: 62px;
+    line-height: 98px;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    max-height: 100px;
+}
+#temp {
+   text-align: center;
+   font-size: 30px;
+   line-height: 30px;
+   margin: 0;
+   padding: 0;
+}
+#temp::after {
+	font-family: "ka-ex";
+	font-size: 28px;
+	content: "A";
+	padding-top: 5px;
+}
+#temps {
+   text-align: center;
+   font-size: 30px;
+   line-height: 30px;
+   margin: 0;
+   padding: 8px 0 0 0;
+}
+#temps span#min {
+    font-size: 14px;
+    margin-right:5px;
+}
+#temps span#max {
+    font-size: 14px;
+    margin-left:5px;
+}
+#temps span#min::after,#temps span#max::after {
+	font-family: "ka-ex";
+	font-size: 16px;
+	content: "A";
+	padding-top: 5px;
+}
+#ext {
+   font-size: 14px;
+   line-height: 14px;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    height: 14px;
+}
+#ext span#hum::before {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "\e048";
+	vertical-align: middle;
+	padding-right: 5px;
+}
+#ext span#min::before {
+	font-family: "fontawesome";
+	font-size: 18px;
+	content: "\f068";
+	vertical-align: middle;
+	padding-right: 5px;
+}
+#ext span#min {
+    text-align: left !important;
+    float: left;
+}
+#ext span#max {
+    text-align: right !important;
+    float: right;
+}
+#ext span#max::after {
+	font-family: "fontawesome";
+	font-size: 18px;
+	content: "\f067";
+	vertical-align: middle;
+	padding-left: 5px;
+}
+#ext span#hum {
+    text-align: left !important;
+    float: left;
+}
+#ext span#wind {
+    text-align: right !important;
+    float: right;
+}
+#ext span#wind::after {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "Q";
+	vertical-align: middle;
+	padding-left: 5px;
+}
+#ext span#nuv::before {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "\e08f";
+	vertical-align: middle;
+	padding-right: 5px;
+}
+#ext span#nuv {
+    text-align: left !important;
+    float: left;
+}
+#ext span#mb {
+    text-align: right !important;
+    float: right;
+}
+#ext span#mb::after {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "\e0a3";
+	vertical-align: middle;
+	padding-left: 5px;
+}
+#ext span#sunrise::before {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "\e014";
+	vertical-align: middle;
+	padding-right: 5px;
+}
+#ext span#sunrise {
+    text-align: left !important;
+    float: left;
+}
+#ext span#sunset {
+    text-align: right !important;
+    float: right;
+}
+#ext span#sunset::after {
+	font-family: "ka-ex";
+	font-size: 18px;
+	content: "\e015";
+	vertical-align: middle;
+	padding-left: 5px;
+}
+#chip {
+    padding: 6px 0 8px 0;
+    border-bottom: 1px solid #A7F700;
+    color: #A7F700;
+}
+#cpu::before {
+	font-family: fontawesome;
+	font-size: 20px;
+	content: "\f2db";
+    vertical-align:middle;
+	padding-right: 8px;
+}
+#cpu {
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 16px;
+   line-height: 16px;
+   margin: 0;
+   padding: 0;
+}
+#cpu::after {
+	font-family: "ka-ex";
+	font-size: 20px;
+	content: "A";
+	padding-top: 4px;
+}
+#tempx {
+   text-align: center;
+   font-size: 16px;
+   line-height: 16px;
+   margin: 0;
+   padding: 0;
+}
+#rooms {
+    padding: 8px 0 8px 0;
+    border-bottom: 1px solid #A7F700;
+    color: #A7F700;
+}
+#condi {
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 16px;
+   line-height: 16px;
+    margin: 0;
+    padding: 0;
+}
+#zone {
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 24px;
+   line-height: 24px;
+   margin: 0;
+   padding: 0;
+}
+#room {
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 26px;
+   line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+#temp1,#temp2 {
+   text-align: center;
+   font-size: 26px;
+   line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+#temp1::after,#temp2::after {
+	font-family: "ka-ex";
+	font-size: 26px;
+	content: "A";
+	padding-top: 5px;
+}
+#controls {
+    padding:7px 8px 0 8px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden !important;
+}
+#controls:last-child {
+    padding-bottom: 7px;
+    overflow: hidden !important;
+}
+button {
+    width:21%;
+    height:40px;
+    margin-right:5px;
+    background-color:#000000;
+    background: rgba(0,0,0,0.7);
+    color:#A7F700;
+    border: 1px solid #000000;
+    font-size:18px;
+}
+button.orange {
+    color:orange;
+}
+button.red {
+    color:red;
+}
+button:last-child {
+    margin-right: 0px;
+}
