@@ -256,7 +256,7 @@ shuffle($paths);
         success: function(data,textStatus,jQxhr){
           //console.log(data);
           var temp = data.TEMP;
-          $('span#temp').text(temp.toFixed(2));
+          $('span#temp').text(temp.toFixed(1));
         },
         error: function(jqXhr,textStatus,errorThrown){
           console.log(errorThrown);
@@ -271,8 +271,8 @@ shuffle($paths);
         contentType: 'application/json',
         success: function(data,textStatus,jQxhr){
           //console.log(data[0]);
-          if (data[0].name == 'temp1') { var temp1 = parseFloat(data[0].temp)+parseFloat(0.5); $('span#temp1').text(temp1.toFixed(2)); } else { $('span#temp1').text(data[0].name); }
-          if (data[1].name == 'temp2') { var temp2 = parseFloat(data[1].temp)+parseFloat(1); $('span#temp2').text(temp2.toFixed(2)); } else { $('span#temp2').text(data[1].name); }
+          if (data[0].name == 'temp1') { var temp1 = parseFloat(data[0].temp)+parseFloat(0.4); $('span#temp1').text(temp1.toFixed(2)); } else { $('span#temp1').text(data[0].name); }
+          if (data[1].name == 'temp2') { var temp2 = parseFloat(data[1].temp)+parseFloat(1.1); $('span#temp2').text(temp2.toFixed(2)); } else { $('span#temp2').text(data[1].name); }
         },
         error: function(jqXhr,textStatus,errorThrown){
           console.log(errorThrown);
@@ -312,7 +312,7 @@ shuffle($paths);
           success: function(data,textStatus,jQxhr){
             //console.log(data);
             var temp = data.TEMP;
-            $('span#temp').text(temp.toFixed(2));
+            $('span#temp').text(temp.toFixed(1));
           },
           error: function(jqXhr,textStatus,errorThrown){
             console.log(errorThrown);
@@ -351,8 +351,8 @@ shuffle($paths);
           contentType: 'application/json',
           success: function(data,textStatus,jQxhr){
             //console.log(data[0]);
-          if (data[0].name == 'temp1') { var temp1 = parseFloat(data[0].temp)+parseFloat(0.5); $('span#temp1').text(temp1.toFixed(2)); } else { $('span#temp1').text(data[0].name); }
-          if (data[1].name == 'temp2') { var temp2 = parseFloat(data[1].temp)+parseFloat(1); $('span#temp2').text(temp2.toFixed(2)); } else { $('span#temp2').text(data[1].name); }
+          if (data[0].name == 'temp1') { var temp1 = parseFloat(data[0].temp)+parseFloat(0.4); $('span#temp1').text(temp1.toFixed(2)); } else { $('span#temp1').text(data[0].name); }
+          if (data[1].name == 'temp2') { var temp2 = parseFloat(data[1].temp)+parseFloat(1.1); $('span#temp2').text(temp2.toFixed(2)); } else { $('span#temp2').text(data[1].name); }
           },
           error: function(jqXhr,textStatus,errorThrown){
             console.log(errorThrown);
